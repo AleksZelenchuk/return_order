@@ -1,0 +1,85 @@
+<?php
+$refundData = $block->getRefundOrder();
+$contactOption = $refundData->getContactReason();
+$contactReason = $block->getOption($contactOption, null);
+$images = $block->returnImagesPath($refundData->getFiles());
+$counter = 1;
+?>
+<div class="admin-refund-order-view">
+    <div class="admin-refund-action page-main-actions">
+        <a href="<?php echo $block->getUrl('uigrid/grid/index') ?>"><button class="action-default scalable back" type="button" title="<?php echo __('Back') ?>"><?php echo __('Back') ?></button></a>
+        <button class="action-default scalable delete" type="button" title="<?php echo __('Delete') ?>" onclick="deleterow(<?php echo $refundData->getId(); ?>)"><?php echo __('Delete') ?></button>
+    </div>
+    <?php if($refundData->getId()): ?>
+    <section class="admin__page-section order-view-account-information">
+    <div class="admin__page-section-title">
+        <span class="title"><?php echo __("Refund Order Request Information.")?></span>
+    </div>
+    <div class="admin__page-section-content">
+        <div class="admin__page-section-item order-information">
+            <div class="admin__page-section-item-title">
+                <span class="title">
+                    <?php echo __('Request ID: ').$refundData->getId();?>
+                </span>
+            </div>
+            <div class="admin__page-section-item-content">
+                <table class="admin__table-secondary order-information-table">
+                    <tbody>
+                        <?php foreach ($refundData->getData() as $key => $row):?>
+                            <?php if ($key != 'id'):?>
+                                <tr class="admin-refund-<?php echo $key; if($counter % 2 == 1): echo ' odd'; else: echo ' even'; endif;?>">
+                                    <td class="admin-refund-<?php echo $key?>-label" style="width: 300px">
+                                        <?php echo $block->getAdminLabel($key); ?>
+                                    </td>
+                                    <td class="admin-refund-<?php echo $key?>-data">
+                                        <?php if($key === 'contact_reason' || $key === 'what_required' || $key === 'files'):?>
+                                            <?php if ($key === 'contact_reason'):?>
+                                                <?php echo $block->getOption($row, null);?>
+                                            <?php endif; ?>
+                                            <?php if($key === 'what_required'):?>
+                                                <?php echo $block->getOption(null, $row);?>
+                                            <?php endif; ?>
+                                            <?php if($key === 'files'):?>
+                                                <?php if ($images):?>
+                                                    <?php foreach ($images as $img): ?>
+                                                        <div class="admin-refund-files-img">
+                                                          <?php echo $img;?>
+                                                        </div>
+                                                    <?php endforeach; ?>
+                                                <?php endif;?>
+                                            <?php endif; ?>
+                                        <?php else: ?>
+                                            <?php echo $row; ?>
+                                        <?php endif; ?>
+                                    </td>
+                                </tr>
+                            <?php endif; ?>
+                            <?php $counter++; ?>
+                        <?php endforeach;?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<?php endif;?>
+</div>
+
+<script>
+    var url =  '<?php echo $block->getAdminUrl("uigrid/grid/delete"); ?>';
+    var grid = '<?php echo $block->getAdminUrl("uigrid/grid/index"); ?>';
+    function deleterow(rowid)
+    {
+        jQuery.ajax({
+            url: url,
+            data: { 'id' : rowid},
+            type: "post",
+            cache: false,
+            showLoader: true,
+            success: function (data) {
+                window.location.href = grid;
+
+            }
+        });
+    }
+</script>

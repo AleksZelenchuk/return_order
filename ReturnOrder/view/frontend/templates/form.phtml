@@ -1,0 +1,134 @@
+<?php
+    $reasonOptions = $block->getContactReasonOptions();
+    $whatRequiredOptions = $block->getWhatRequiredOptions();
+?>
+
+<form id="order-refund-form" action="<?php echo $block->getFormAction() ?>" method="post" data-mage-init='{"validation":{}, "deliveryrefund":{}}' enctype="multipart/form-data">
+    <section class="refund-section-1">
+        <li id="name-fields">
+            <input type="hidden" class="delivery-name-label" value="<?php /* @escapeNotVerified */ echo __('Delivery Name *');?>">
+            <span>
+                <label for="delivery-first-name" class="table-val"><?php /* @escapeNotVerified */ echo __('First Name');?><span id="first-name-required" class="required">*</span></label>
+			    <input id="delivery-first-name" name="delivery-first-name" class="element text firstname require table-val" maxlength="255" size="8" type="text" data-validate='{"required":true}'>
+		    </span>
+            <span>
+                <label for="delivery-second-name"  class="table-val"><?php /* @escapeNotVerified */ echo __('Last Name');?><span id="first-name-required" class="required">*</span></label>
+			    <input id="delivery-second-name" name="delivery-second-name" class="element text second-name require table-val" maxlength="255" size="14" type="text" data-validate='{"required":true}'>
+		    </span>
+        </li>
+        <li id="email">
+            <label class="description table-val" for="delivery-email"><?php /* @escapeNotVerified */ echo __('Email Address ');?><span id="email-required" class="required">*</span></label>
+            <div>
+                <input id="delivery-email" name="delivery-email" class="element text medium email require table-val" maxlength="255" placeholder="<?php /* @escapeNotVerified */ echo __('youremail@mail.com');?>" type="text" data-validate='{"required":true, "email":true}'>
+            </div>
+        </li>
+        <li id="contact-number">
+            <label class="description table-val" for="contact-number"><?php /* @escapeNotVerified */ echo __('Contact Number.');?></label>
+            <div>
+                <input id="delivery-contact-number" name="delivery-contact-number" class="element text medium contact-number table-val" maxlength="255" value="" type="text">
+            </div>
+        </li>
+        <li id="adress-postcode">
+            <label class="description table-val" for="delivery-adress-postcode"><?php /* @escapeNotVerified */ echo __('Address and Postcode.');?><span id="adress-postcode-required" class="required">*</span></label>
+            <div>
+                <textarea id="delivery-adress-postcode" name="delivery-adress-postcode" class="element textarea medium adress-postcode require table-val" rows="8" cols="90" data-validate='{"required":true}'></textarea>
+            </div>
+        </li>
+        <li id="order-id">
+            <label class="description table-val" for="delivery-order-id"><?php /* @escapeNotVerified */ echo __('Order Number.');?><span id="order-id-required" class="required">*</span></label>
+            <div>
+                <input id="delivery-order-id" name="delivery-order-id" class="element text medium order-id require table-val" type="text" data-validate='{"required":true, "digits":true}'>
+            </div>
+            <p class="guidelines" id="delivery-order-id-info">
+                <small><?php /* @escapeNotVerified */ echo __('This can be found on the invoice emailed on the day of dispatch');?></small>
+            </p>
+        </li>
+        <li id="date">
+            <label class="description table-val" for="">Purchase Date. </label>
+            <div>
+                <input type="date" id="delivery-date-value" name="delivery-date-value" class="element date date-value table-val"/>
+            </div>
+        </li>
+        <button type="button" id="check-section1-button" class="action-submit btn-submit"><?php /* @escapeNotVerified */ echo __('Continue');?></button>
+    </section>
+    <section class="refund-section-2" style="display: none">
+        <li id="order-details">
+            <label class="description table-val" for="delivery-order-details"><?php /* @escapeNotVerified */ echo __('Product Code / Model Number &amp; Quantity');?><span id="order-details-required" class="required">*</span></label>
+            <div>
+                <textarea id="delivery-order-details" name="delivery-order-details" class="element textarea medium order-details require table-val" rows="8" cols="90" data-validate='{"required":true}'></textarea>
+            </div>
+        </li>
+        <li id="contact-reason">
+            <label class="description table-val" for="delivery-contact-reason"><?php /* @escapeNotVerified */ echo __('Reason for contact. ');?></label>
+            <div>
+                <select class="element select medium contact-reason table-val" id="delivery-contact-reason" name="delivery-contact-reason">
+                    <option value="" selected="selected"><?php /* @escapeNotVerified */ echo __('-- Select --');?></option>
+                    <?php foreach ($reasonOptions as $key => $value): ?>
+                        <option value="<?php echo $key; ?>"><?php echo $value; ?></option>
+                    <?php endforeach;?>
+                </select>
+            </div>
+        </li>
+        <li id="upload-files">
+            <label for="upload"><?php /* @escapeNotVerified */ echo __('Upload File');?></label>
+            <div id="upload">
+                <input type="file" name="upl[]" multiple="multiple" />
+            </div>
+        </li>
+        <li id="explanation">
+            <label class="description table-val" for="delivery-explanation"><?php /* @escapeNotVerified */ echo __('If other please explain here.');?></label>
+            <div>
+                <textarea id="delivery-explanation" name="delivery-explanation" class="element textarea medium table-val" rows="8" cols="90"></textarea>
+            </div>
+        </li>
+        <li id="warranty">
+            <label class="description table-val" for="delivery-warranty"><?php /* @escapeNotVerified */ echo __('Warranty Number.');?><br>
+                <?php /* @escapeNotVerified */ echo __('(If applicable)');?><span id="warranty-required" class="required">*</span></label>
+            <div>
+                <input id="delivery-warranty" name="delivery-warranty" class="element text medium require table-val" data-validate='{"required":true}' title="<?php /* @escapeNotVerified */ echo __('This is important to include for all electrical items it can be found printed on the back of user manual / instruction manual. If this is not included then the item will have to be returned in order for a replacement to be sent. If no warranty number is available please put 000000'); ?>" type="text">
+            </div>
+            <p class="guidelines" id="warranty-guide">
+                <small>
+                    <?php /* @escapeNotVerified */ echo __('This is important to include for all electrical items it can be found printed on the back of user manual / instruction manual. If this is not included then the item will have to be returned in order for a replacement to be sent. If no warranty number is available please put 000000');?>
+                </small>
+            </p>
+        </li>
+        <li id="description">
+            <label class="description table-val" for="delivery-description"><?php /* @escapeNotVerified */ echo __('Please give a brief description of items damage or fault. (If applicable).');?><span id="delivery-description-required" class="required">*</span></label>
+            <div>
+                <textarea id="delivery-description" name="delivery-description" class="element textarea medium require table-val" rows="8" cols="90" data-validate='{"required":true}'></textarea>
+            </div>
+            <p class="guidelines" id="guide_13">
+                <small><?php /* @escapeNotVerified */ echo __('Please let us know of the issues you are having, so this can be reported and resolved.');?></small>
+            </p>
+        </li>
+        <li id="what-required">
+            <label class="description table-val" for="delivery-what-required"><?php /* @escapeNotVerified */ echo __('What is required?');?> <span id="what-required-required" class="required">*</span></label>
+            <div>
+                <select class="element select medium require table-val" id="delivery-what-required" name="delivery-what-required" data-validate='{"required":true}'>
+                    <option value="" selected="selected"><?php /* @escapeNotVerified */ echo __('-- Select --');?></option>
+                    <?php foreach ($whatRequiredOptions as $key2 => $value2): ?>
+                        <option value="<?php echo $key2; ?>"><?php echo $value2; ?></option>
+                    <?php endforeach;?>
+                </select>
+            </div>
+        </li>
+        <li id="paragraph">
+            <label class="description table-val" for="delivery-paragraph"><?php /* @escapeNotVerified */ echo __('Paragraph');?></label>
+            <div>
+                <textarea id="delivery-paragraph" name="delivery-paragraph" class="element textarea medium table-val" rows="8" cols="90"></textarea>
+            </div>
+        </li>
+        <button type="button" id="show-section1-button" class="action-submit btn-submit"><?php /* @escapeNotVerified */ echo __('Previous');?></button>
+        <button type="button" id="check-section2-button" class="action-submit btn-submit"><?php /* @escapeNotVerified */ echo __('Continue');?></button>
+    </section>
+    <section class="refund-section-3" style="display: none">
+        <table class="delivery-preview-table">
+            <tbody id="delivery-preview-table">
+
+            </tbody>
+        </table>
+        <button type="button" id="show-section2-button" class="action-submit btn-submit"><?php /* @escapeNotVerified */ echo __('Previous');?></button>
+        <button class="action-submit btn-submit" id="submit-request-form" type="submit"><?php /* @escapeNotVerified */ echo __('Send refund request');?></button>
+    </section>
+</form>

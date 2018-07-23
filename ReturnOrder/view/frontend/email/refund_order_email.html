@@ -1,0 +1,20 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!--@subject {{trans "Return order request %store_name" store_name=$store.getFrontendName()}} @-->
+
+{{template config_path="design/email/header_template"}}
+
+<p>
+<h2>{{trans "Created new refund request"}}</h2>
+<ul>
+    {{depend data.request-id}}
+    <li><strong>{{trans "Request id:"}}</strong> {{var data.request-id}}</li>
+    {{/depend}}
+</ul>
+<p>
+
+{{template config_path="design/email/footer_template"}}
