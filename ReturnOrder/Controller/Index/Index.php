@@ -1,9 +1,9 @@
 <?php
 
-namespace Fantronix\ReturnOrder\Controller\Index;
+namespace Namespace\ReturnOrder\Controller\Index;
 
 use Magento\Framework\Controller\ResultFactory;
-use Fantronix\ReturnOrder\Helper\SendEmail;
+use Namespace\ReturnOrder\Helper\SendEmail;
 use Magento\Setup\Exception;
 
 class Index extends \Magento\Framework\App\Action\Action
@@ -31,7 +31,7 @@ class Index extends \Magento\Framework\App\Action\Action
         \Magento\Store\Model\StoreManagerInterface $storeManager,
         \Magento\Framework\Mail\Template\TransportBuilder $transportBuilder,
         \Magento\Framework\Filesystem $filesystem,
-        \Fantronix\ReturnOrder\Model\ReturnOrder $returnOrder,
+        \Namespace\ReturnOrder\Model\ReturnOrder $returnOrder,
         \Magento\Framework\Stdlib\DateTime\DateTime $datetime,
         \Magento\MediaStorage\Model\File\UploaderFactory $fileUploaderFactory,
         SendEmail $sendEmail
