@@ -1,6 +1,6 @@
 <?php
 
-namespace Fantronix\ReturnOrder\Ui\Component\Listing\Grid\Column;
+namespace Namespace\ReturnOrder\Ui\Component\Listing\Grid\Column;
 
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
