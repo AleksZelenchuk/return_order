@@ -1,9 +1,9 @@
 <?php
 
-namespace Fantronix\ReturnOrder\Model;
+namespace Namespace\ReturnOrder\Model;
 
 use Magento\Framework\Phrase;
-use Fantronix\ReturnOrder\Api\Data\GridInterface;
+use Namespace\ReturnOrder\Api\Data\GridInterface;
 
 class ReturnOrder extends \Magento\Framework\Model\AbstractModel implements GridInterface
 {
@@ -20,7 +20,7 @@ class ReturnOrder extends \Magento\Framework\Model\AbstractModel implements Grid
     }
     protected function _construct()
     {
-        $this->_init('Fantronix\ReturnOrder\Model\ResourceModel\ReturnOrder');
+        $this->_init('Namespace\ReturnOrder\Model\ResourceModel\ReturnOrder');
     }
 
     public function getId(){
