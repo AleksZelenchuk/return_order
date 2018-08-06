@@ -167,7 +167,7 @@
         </column>
         <column name="what_required">
             <argument name="data" xsi:type="array">
-                <item name="options" xsi:type="object">Fantronix\ReturnOrder\Ui\Component\Listing\Grid\Column\RequiredOptions</item>
+                <item name="options" xsi:type="object">Namespace\ReturnOrder\Ui\Component\Listing\Grid\Column\RequiredOptions</item>
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">select</item>
                     <item name="label" xsi:type="string" translate="true">What required</item>
@@ -202,7 +202,7 @@
                 </item>
             </argument>
         </column>
-        <actionsColumn name="actions" class="Fantronix\ReturnOrder\Ui\Component\Listing\Grid\Column\Action">
+        <actionsColumn name="actions" class="Namespace\ReturnOrder\Ui\Component\Listing\Grid\Column\Action">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="resizeEnabled" xsi:type="boolean">false</item>
