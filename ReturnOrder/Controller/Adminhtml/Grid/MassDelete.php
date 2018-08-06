@@ -1,11 +1,11 @@
 <?php
 
-namespace Fantronix\ReturnOrder\Controller\Adminhtml\Grid;
+namespace Namespace\ReturnOrder\Controller\Adminhtml\Grid;
 
 use Magento\Framework\Controller\ResultFactory;
-use Fantronix\ReturnOrder\Block\Adminhtml\Grid\View;
+use Namespace\ReturnOrder\Block\Adminhtml\Grid\View;
 use Magento\Ui\Component\MassAction\Filter;
-use Fantronix\ReturnOrder\Model\ResourceModel\ReturnOrder\CollectionFactory;
+use Namespace\ReturnOrder\Model\ResourceModel\ReturnOrder\CollectionFactory;
 
 class MassDelete extends \Magento\Backend\App\Action
 {
