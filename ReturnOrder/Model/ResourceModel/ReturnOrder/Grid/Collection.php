@@ -3,7 +3,7 @@
 /**
  * Resource Collection
  */
-namespace Fantronix\ReturnOrder\Model\ResourceModel\ReturnOrder\Grid;
+namespace Namespace\ReturnOrder\Model\ResourceModel\ReturnOrder\Grid;
 
 use Magento\Framework\Search\AggregationInterface;
 use Magento\Framework\Api\Search\SearchResultInterface;
