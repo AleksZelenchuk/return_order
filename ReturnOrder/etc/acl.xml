@@ -2,7 +2,7 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Fantronix_ReturnOrder::returnorder" title="Test" translate="title" sortOrder="30">
+                <resource id="Namespace_ReturnOrder::returnorder" title="Test" translate="title" sortOrder="30">
                 </resource>
             </resource>
         </resources>
