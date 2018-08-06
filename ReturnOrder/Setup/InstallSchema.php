@@ -1,6 +1,6 @@
 <?php
 
-namespace Fantronix\ReturnOrder\Setup;
+namespace Namespace\ReturnOrder\Setup;
 
 use Magento\Framework\Setup\InstallSchemaInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
