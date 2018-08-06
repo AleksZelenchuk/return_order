@@ -1,6 +1,6 @@
 <?php
 
-namespace Fantronix\ReturnOrder\Ui\Component\Listing\Grid\Column;
+namespace Namespace\ReturnOrder\Ui\Component\Listing\Grid\Column;
 
 class RequiredOptions implements \Magento\Framework\Option\ArrayInterface
 {
