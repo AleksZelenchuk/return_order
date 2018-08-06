@@ -1,8 +1,8 @@
 <?php
 /**
- * Fantronix\ReturnOrder Add Row Form Block.
+ * Namespace\ReturnOrder Add Row Form Block.
  */
-namespace Fantronix\ReturnOrder\Block\Adminhtml\Grid;
+namespace Namespace\ReturnOrder\Block\Adminhtml\Grid;
 
 class AddRow extends \Magento\Backend\Block\Widget\Form\Container
 {
@@ -34,10 +34,10 @@ class AddRow extends \Magento\Backend\Block\Widget\Form\Container
     protected function _construct()
     {
         $this->_objectId = 'row_id';
-        $this->_blockGroup = 'Fantronix_ReturnOrder';
+        $this->_blockGroup = 'Namespace_ReturnOrder';
         $this->_controller = 'adminhtml_grid';
         parent::_construct();
-        if ($this->_isAllowedAction('Fantronix_ReturnOrder::addrow')) {
+        if ($this->_isAllowedAction('Namespace_ReturnOrder::addrow')) {
             $this->buttonList->update('save', 'label', __('Save'));
         } else {
             $this->buttonList->remove('save');
