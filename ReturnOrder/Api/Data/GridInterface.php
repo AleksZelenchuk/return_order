@@ -2,7 +2,7 @@
 /**
  * Grid GridInterface.
  */
-namespace Fantronix\ReturnOrder\Api\Data;
+namespace Namespace\ReturnOrder\Api\Data;
 interface GridInterface
 {
     /**
