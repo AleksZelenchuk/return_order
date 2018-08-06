@@ -1,9 +1,9 @@
 <?php
 
-namespace Fantronix\ReturnOrder\Controller\Adminhtml\Grid;
+namespace Namespace\ReturnOrder\Controller\Adminhtml\Grid;
 
 use Magento\Framework\Controller\ResultFactory;
-use Fantronix\ReturnOrder\Block\Adminhtml\Grid\View;
+use Namespace\ReturnOrder\Block\Adminhtml\Grid\View;
 
 class Delete extends \Magento\Backend\App\Action
 {
@@ -14,8 +14,8 @@ class Delete extends \Magento\Backend\App\Action
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
-        \Fantronix\ReturnOrder\Model\ReturnOrderFactory $collection,
-        \Fantronix\ReturnOrder\Block\Adminhtml\Grid\View $view
+        \Namespace\ReturnOrder\Model\ReturnOrderFactory $collection,
+        \Namespace\ReturnOrder\Block\Adminhtml\Grid\View $view
     ) {
         parent::__construct($context);
         $this->_gridView = $view;
