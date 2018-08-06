@@ -1,6 +1,6 @@
 <?php
 
-namespace Fantronix\ReturnOrder\Controller\Adminhtml\Grid;
+namespace Namespace\ReturnOrder\Controller\Adminhtml\Grid;
 
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\App\Action\Action;
@@ -34,7 +34,7 @@ class Index extends Action
     {
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->_resultPageFactory->create();
-        $resultPage->setActiveMenu('Fantronix_ReturnOrder::returnorder');
+        $resultPage->setActiveMenu('Namespace_ReturnOrder::returnorder');
         $resultPage->getConfig()->getTitle()->prepend(__('Order Refund Requests'));
 
         return $resultPage;
@@ -50,6 +50,6 @@ class Index extends Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Fantronix_ReturnOrder::returnorder');
+        return $this->_authorization->isAllowed('Namespace_ReturnOrder::returnorder');
     }
 }
