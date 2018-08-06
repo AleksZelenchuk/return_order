@@ -59,6 +59,6 @@ class AddRow extends \Magento\Backend\App\Action
 
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Fantronix_ReturnOrder::addrow');
+        return $this->_authorization->isAllowed('Namespace_ReturnOrder::addrow');
     }
 }
