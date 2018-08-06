@@ -1,5 +1,5 @@
 <?php
-namespace Fantronix\ReturnOrder\Model\ResourceModel;
+namespace Namespace\ReturnOrder\Model\ResourceModel;
 
 /**
  * ReturnOrder Resource Model
