@@ -1,6 +1,6 @@
 <?php
 
-namespace Fantronix\ReturnOrder\Block;
+namespace Namespace\ReturnOrder\Block;
 
 class View extends \Magento\Framework\View\Element\Template
 {
