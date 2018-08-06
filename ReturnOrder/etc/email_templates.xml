@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
-    <template id="fantrnoix_returnorder_email_template" label="Order Refund" file="refund_order_email.html" type="html" module="Fantronix_ReturnOrder" area="frontend"/>
+    <template id="namespace_returnorder_email_template" label="Order Refund" file="refund_order_email.html" type="html" module="Namespace_ReturnOrder" area="frontend"/>
 </config>
