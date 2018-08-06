@@ -5,7 +5,7 @@
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="Fantronix\ReturnOrder\Block\View" name="return.order.form" template="Fantronix_ReturnOrder::form.phtml"/>
+            <block class="Namespace\ReturnOrder\Block\View" name="return.order.form" template="Namespace_ReturnOrder::form.phtml"/>
         </referenceContainer>
     </body>
 </page>
