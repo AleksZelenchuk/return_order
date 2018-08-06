@@ -1,6 +1,6 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="Fantronix_ReturnOrder::returnorder" title="Fantronix" translate="title" module="Fantronix_ReturnOrder" sortOrder="20" dependsOnModule="Fantronix_ReturnOrder" resource="Fantronix_ReturnOrder::returnorder"/>
-        <add id="Fantronix_ReturnOrder::returnorder_uigrid" title="Order refund queries" translate="title" module="Fantronix_ReturnOrder" sortOrder="10" parent="Fantronix_ReturnOrder::returnorder" action="uigrid/grid/index" resource="Fantronix_ReturnOrder::returnorder"/>
+        <add id="Namespace_ReturnOrder::returnorder" title="Namespace" translate="title" module="Namespace_ReturnOrder" sortOrder="20" dependsOnModule="Namespace_ReturnOrder" resource="Namespace_ReturnOrder::returnorder"/>
+        <add id="Namespace_ReturnOrder::returnorder_uigrid" title="Order refund queries" translate="title" module="Namespace_ReturnOrder" sortOrder="10" parent="Namespace_ReturnOrder::returnorder" action="uigrid/grid/index" resource="Namespace_ReturnOrder::returnorder"/>
     </menu>
 </config>
