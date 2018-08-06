@@ -1,9 +1,9 @@
 <?php
 /**
- * Fantronix\ReturnOrder Add New Row Form Admin Block.
+ * Namespace\ReturnOrder Add New Row Form Admin Block.
  *
  */
-namespace Fantronix\ReturnOrder\Block\Adminhtml\Grid\Edit;
+namespace Namespace\ReturnOrder\Block\Adminhtml\Grid\Edit;
 
 
 /**
@@ -16,7 +16,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
      */
     protected $_systemStore;
     /**
-    * @var \Fantronix\ReturnOrder\Block\View
+    * @var \Namespace\ReturnOrder\Block\View
     */
     protected $_options;
 
@@ -31,7 +31,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
         \Magento\Framework\Registry $registry,
         \Magento\Framework\Data\FormFactory $formFactory,
         \Magento\Cms\Model\Wysiwyg\Config $wysiwygConfig,
-        \Fantronix\ReturnOrder\Block\View $options,
+        \Namespace\ReturnOrder\Block\View $options,
         array $data = []
     )
     {
