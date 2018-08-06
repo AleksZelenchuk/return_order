@@ -1,8 +1,8 @@
 <?php
 /**
- * Fantronix\ReturnOrder List Controller.
+ * Namespace\ReturnOrder List Controller.
  */
-namespace Fantronix\ReturnOrder\Controller\Adminhtml\Grid;
+namespace Namespace\ReturnOrder\Controller\Adminhtml\Grid;
 
 use Magento\Framework\Controller\ResultFactory;
 
@@ -13,7 +13,7 @@ class View extends \Magento\Backend\App\Action
      */
     private $coreRegistry;
     /**
-     * @var \Fantronix\ReturnOrder\Model\GridFactory
+     * @var \Namespace\ReturnOrder\Model\GridFactory
      */
     private $gridFactory;
 
@@ -24,7 +24,7 @@ class View extends \Magento\Backend\App\Action
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
         \Magento\Framework\Registry $coreRegistry,
-        \Fantronix\ReturnOrder\Model\ReturnOrderFactory $gridFactory
+        \Namespace\ReturnOrder\Model\ReturnOrderFactory $gridFactory
     ) {
         parent::__construct($context);
         $this->coreRegistry = $coreRegistry;
@@ -57,6 +57,6 @@ class View extends \Magento\Backend\App\Action
 
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Fantronix_ReturnOrder::addrow');
+        return $this->_authorization->isAllowed('Namespace_ReturnOrder::addrow');
     }
 }
