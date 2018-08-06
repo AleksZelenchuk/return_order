@@ -1,14 +1,11 @@
 <?php
-namespace Fantronix\ReturnOrder\Helper;
+namespace Namespace\ReturnOrder\Helper;
 
-/**
- * Custom Module Email helper
- */
 use Magento\Framework\App\Config\ScopeConfigInterface;
 
 class SendEmail extends \Magento\Framework\App\Helper\AbstractHelper
 {
-    const XML_PATH_EMAIL_TEMPLATE_FIELD  = 'fantrnoix_returnorder_email_template';
+    const XML_PATH_EMAIL_TEMPLATE_FIELD  = 'namespace_returnorder_email_template';
     /* Here section and group refer to name of section and group where you create this field in configuration*/
 
     /**
