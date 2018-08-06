@@ -5,7 +5,7 @@
     <body>
         <referenceBlock name="menu">
             <action method="setActive">
-                <argument name="id" xsi:type="string">Fantronix_ReturnOrder::returnorder_uigrid</argument>
+                <argument name="id" xsi:type="string">Namespace_ReturnOrder::returnorder_uigrid</argument>
             </action>
         </referenceBlock>
         <referenceContainer name="content">
