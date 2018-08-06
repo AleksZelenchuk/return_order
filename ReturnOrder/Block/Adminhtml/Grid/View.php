@@ -1,8 +1,8 @@
 <?php
 /**
- * Fantronix\ReturnOrder Add Row Form Block.
+ * Namespace\ReturnOrder Add Row Form Block.
  */
-namespace Fantronix\ReturnOrder\Block\Adminhtml\Grid;
+namespace Namespace\ReturnOrder\Block\Adminhtml\Grid;
 
 
 use Magento\Setup\Exception;
@@ -31,7 +31,7 @@ class View extends \Magento\Framework\View\Element\Template
         \Magento\Backend\Block\Widget\Context $context,
         \Magento\Framework\Registry $registry,
         \Magento\Backend\Block\Widget\Form\Container $container,
-        \Fantronix\ReturnOrder\Block\View $view,
+        \Namespace\ReturnOrder\Block\View $view,
         \Magento\Framework\Filesystem $filesystem,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
         \Magento\Framework\Filesystem\DirectoryList $directoryList,
@@ -56,7 +56,7 @@ class View extends \Magento\Framework\View\Element\Template
     {
 
         $this->_objectId = 'row_id';
-        $this->_blockGroup = 'Fantronix_ReturnOrder';
+        $this->_blockGroup = 'Namespace_ReturnOrder';
         $this->_controller = 'adminhtml_grid';
         parent::_construct();
     }
